@@ -9,7 +9,7 @@ opening.addEventListener("touchstart", function() {
     // opening.style.opacity = "0";
     opening.style.display = "none";
     const prologue = document.createElement("p");
-    prologue.innerText = isiTeks[0].prologue;
+    prologue.innerHTML = isiTeks[0].prologue;
     cerita.appendChild(prologue);
     cerita.style.textJustify = "inter-word";
     cerita.style.textAlign = "justify";
@@ -23,9 +23,20 @@ opening.addEventListener("touchstart", function() {
         prologue.style.display = "none";
         nextBtn.style.display = "none";
 
-        // const senjata = document.createElement("p");
-        // senjata.innerText = isiTeks[0];
-        // cerita.appendChild(senjata);
+        const playerProfile = document.querySelector(".player");
+        const userImage = document.querySelector(".user-image");
+        const username = document.querySelector(".user-name");
+        const userclass = document.querySelector(".user-class");
+        const hp = document.querySelector(".hp");
+        const hpAmount = document.querySelector(".hp-amount");
+
+        userImage.src = isiTeks[1].userImage;
+        username.innerHTML = isiTeks[1].userName;
+        userclass.innerHTML = isiTeks[1].userClass;
+        hp.innerHTML = "HP";
+        hpAmount.textContent = 100;
+        playerProfile.display = "block";
+        
     });
 });
 
