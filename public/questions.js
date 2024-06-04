@@ -1,23 +1,27 @@
-export const questions = [
-    {
-        levelSatu: 
-            {
-                pertanyaanSatu: "We've got ____ water left!",
-                pertanyaanDua: "Where ____ you come from?",
-                pertanyaanTiga: "What time does she ___ up?",
-                pertanyaanEmpat: "I am not ____ this film.",
-                pertanyaanLima: "I am seeing her ____ three o'clock.",
-                pertanyaanEnam: "Easter is ___ March this year.",
-                pertanyaanTujuh: "She's ____ work all day today.",
-                pertanyaanDelapan: "I go ___ by bus.",
-                pertanyaanSembilan: "Where ____ you come from?",
-                pertanyaanSepuluh: "Where ____ you come from?"
-            },
+const questions = [
+  "We've got ____ water left!",
+  "Where ____ you come from?",
+  "What time does she ___ up?",
+  "I am not ____ this film.",
+  "I am seeing her ____ three o'clock.",
+  "Easter is ___ March this year.",
+  "She's ____ work all day today.",
+  "I go ___ by bus.",
+  "Where ____ you come from?",
+  "Where ____ you come from?",
+];
 
-        levelDua:
-            {
-                pertanyaanSatu: "he did it ___ her own.",
-                pertanyaanDua: "It is not ____ mine."
-            }
-    }
+const answers = [
+    ["some", "any", "a  few", "very"],
+    ["are", "do", "did", "were"],
+    ["wake", "woke", "woken", "waking"],
+    ["seeing", "enjoying", "liking", "fond"],
+    ["at", "on", "in", "upon"],
+    ["on", "in", "at", "upon"],
+    ["on", "in", "at", "by"],
+    ["there", "their", "they're", "them"],
+    ["did", "are", "is", "was"],
+    ["did", "are", "is", "was"]
 ]
+
+export { questions, answers };
