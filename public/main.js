@@ -1,5 +1,6 @@
 import { isiTeks } from "./story.js";
 import { questions } from "./questions.js";
+import { answers } from "./questions.js";
 
 const cerita = document.querySelector(".text");
 const opening = document.querySelector(".opening");
@@ -34,9 +35,30 @@ opening.addEventListener("touchstart", function() {
         username.innerHTML = isiTeks[1].userName;
         userclass.innerHTML = isiTeks[1].userClass;
         hp.innerHTML = "HP";
-        hpAmount.textContent = 100;
-        playerProfile.display = "block";
+        hpAmount.textContent = isiTeks[1].userHP;
+
+
+        const questionsList = (questions);
+        const eachQuestion = questionsList[Math.floor(Math.random() * questionsList.length)]
+        cerita.textContent = '';
+
+        const createQuestions = document.createElement("h1");
+        createQuestions.innerHTML= eachQuestion;
+        cerita.appendChild(createQuestions);
+
+
+        const choicesList = [Math.floor(Math.random() * answers.length)];
+        const outerRandomChoices = answers[choicesList];
+        for (let i = 1; i < 5; i++) {
+            let btnChoice = document.createElement("button");
+            const innerRandomChoices = [Math.floor(Math.random() * outerRandomChoices.length)];
+            const getChoices = outerRandomChoices[innerRandomChoices];
+            btnChoice.textContent = getChoices;
+            choices.appendChild(btnChoice);
+        }
         
+        
+
     });
 });
 
