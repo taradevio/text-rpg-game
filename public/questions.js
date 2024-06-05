@@ -22,6 +22,6 @@ const answers = [
     ["there", "their", "they're", "them"],
     ["did", "are", "is", "was"],
     ["did", "are", "is", "was"]
-]
+];
 
 export { questions, answers };
