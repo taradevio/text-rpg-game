@@ -39,22 +39,32 @@ opening.addEventListener("touchstart", function() {
 
 
         const questionsList = (questions);
-        const eachQuestion = questionsList[Math.floor(Math.random() * questionsList.length)]
-        cerita.textContent = '';
+        questionsList.forEach((element => {
+            cerita.textContent = '';
+            const createQuestions = document.createElement("h1");
+            createQuestions.innerHTML= element;
+            cerita.appendChild(createQuestions);
+        }));
 
-        const createQuestions = document.createElement("h1");
-        createQuestions.innerHTML= eachQuestion;
-        cerita.appendChild(createQuestions);
+
 
 
         const choicesList = [Math.floor(Math.random() * answers.length)];
         const outerRandomChoices = answers[choicesList];
         for (let i = 1; i < 5; i++) {
             let btnChoice = document.createElement("button");
-            const innerRandomChoices = [Math.floor(Math.random() * outerRandomChoices.length)];
-            const getChoices = outerRandomChoices[innerRandomChoices];
-            btnChoice.textContent = getChoices;
-            choices.appendChild(btnChoice);
+            answers.forEach((eachAnswer) => {
+                eachAnswer.forEach((element) => {
+                    btnChoice.innerHTML = element;
+                })    
+                choices.appendChild(btnChoice); 
+            })
+            // innerRandomChoices.forEach((element => {
+            //     element.forEach((element => {
+            //         btnChoice.textContent = element;
+            //     }))
+                
+            // }))
         }
         
         
