@@ -40,21 +40,23 @@ opening.addEventListener("touchstart", function() {
 
         // create questions and answers and populate
         questions.forEach((question, index) => {
-            cerita.textContent = '';
+            cerita.textContent = "";
             const createQuestions = document.createElement("h1");
             createQuestions.innerHTML= question;
             cerita.appendChild(createQuestions);
 
-            choices.innerHTML = '';
+            choices.innerHTML = "";
 
             for (let i = 0; i < 4; i++) {
                 let btnChoice = document.createElement("button");
                 const btnAnswers = answers[index][i];
                 btnChoice.textContent = btnAnswers || '';
+                btnChoice.style.cursor = "pointer;"
                 choices.appendChild(btnChoice);
 
             }
         })
+
 
     });
 });
