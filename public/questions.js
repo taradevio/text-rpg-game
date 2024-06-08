@@ -7,7 +7,7 @@ const questions = [
   "Easter is ___ March this year.",
   "She's ____ work all day today.",
   "I go ___ by bus.",
-  "Where ____ you come from?",
+  "Where ____ you been?",
   "Where ____ you come from?",
 ];
 
@@ -20,7 +20,7 @@ const answers = [
     ["on", "in", "at", "upon"],
     ["on", "in", "at", "by"],
     ["there", "their", "they're", "them"],
-    ["did", "are", "is", "was"],
+    ["have", "has", "had", "was"],
     ["did", "are", "is", "was"]
 ];
 
