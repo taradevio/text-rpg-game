@@ -31,43 +31,30 @@ opening.addEventListener("touchstart", function() {
         const hp = document.querySelector(".hp");
         const hpAmount = document.querySelector(".hp-amount");
 
+        // create user profile
         userImage.src = isiTeks[1].userImage;
         username.innerHTML = isiTeks[1].userName;
         userclass.innerHTML = isiTeks[1].userClass;
         hp.innerHTML = "HP";
         hpAmount.textContent = isiTeks[1].userHP;
 
-
-        const questionsList = (questions);
-        questionsList.forEach((element => {
+        // create questions and answers and populate
+        questions.forEach((question, index) => {
             cerita.textContent = '';
             const createQuestions = document.createElement("h1");
-            createQuestions.innerHTML= element;
+            createQuestions.innerHTML= question;
             cerita.appendChild(createQuestions);
-        }));
 
+            choices.innerHTML = '';
 
+            for (let i = 0; i < 4; i++) {
+                let btnChoice = document.createElement("button");
+                const btnAnswers = answers[index][i];
+                btnChoice.textContent = btnAnswers || '';
+                choices.appendChild(btnChoice);
 
-
-        const choicesList = [Math.floor(Math.random() * answers.length)];
-        const outerRandomChoices = answers[choicesList];
-        for (let i = 1; i < 5; i++) {
-            let btnChoice = document.createElement("button");
-            answers.forEach((eachAnswer) => {
-                eachAnswer.forEach((element) => {
-                    btnChoice.innerHTML = element;
-                })    
-                choices.appendChild(btnChoice); 
-            })
-            // innerRandomChoices.forEach((element => {
-            //     element.forEach((element => {
-            //         btnChoice.textContent = element;
-            //     }))
-                
-            // }))
-        }
-        
-        
+            }
+        })
 
     });
 });
