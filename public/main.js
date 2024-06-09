@@ -51,11 +51,23 @@ opening.addEventListener("touchstart", function() {
                 let btnChoice = document.createElement("button");
                 const btnAnswers = answers[index][i];
                 btnChoice.textContent = btnAnswers || '';
-                btnChoice.style.cursor = "pointer;"
+                btnChoice.style.cursor = "pointer";
                 choices.appendChild(btnChoice);
-
             }
         })
+
+
+        // function userAnswer() {
+        //     const getAnswer = answers[9].filter(function (answers) {
+        //         if (answers !== "did") {
+        //             console.log("wrong answer");
+        //         }
+        //     })
+        // }
+
+        // btnChoice.onclick = userAnswer();
+
+        let questionStart = 0;
 
 
     });
